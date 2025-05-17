@@ -1,0 +1,19 @@
+<div class="rounded-xl bg-white stats-card-shadow py-2 pb-4">
+  <div class="flex p-4 rounded-md">
+    <div class="rounded-full mx-2 px-1" [ngClass]="titleIconBG">
+      <i class=" text-black text-2xl" [ngClass]="titleIcon"></i>
+    </div>
+    <small class="text-xl">{{ title }}</small>
+  </div>
+
+  <div class="flex mx-8 justify-end">
+    <h2 class="text-5xl text-[#6f6f6f]">{{ amount }}</h2>
+
+    <div class="ml-8 mb-2 text-right">
+      <i class="text-xl text-green-400 font-extrabold" [ngClass]="'bi bi-graph-up-arrow'" *ngIf="isIncreased"></i>
+      <i class="text-xl text-red-400 font-extrabold" [ngClass]="'bi bi-graph-down-arrow'" *ngIf="!isIncreased"></i>
+      <p class="">{{ transactionPeriod }}</p>
+    </div>
+  </div>
+</div>
+
